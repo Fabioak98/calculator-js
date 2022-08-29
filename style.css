@@ -1,0 +1,53 @@
+@font-face {
+    font-family: TechMono;
+    src: url('ShareTechMono-Regular.ttf');
+}
+                
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    position: relative;
+    display: grid;
+    width: 25.5%;
+    height: 35%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: #2C394B;
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+}
+
+.display{
+    border: 5px;
+    height: 10%;
+    width: 25.5%;
+    background-color: 082032;
+    color: white;
+    text-align: right;
+    font-family: TechMono;
+    font-size: 40px;
+}
+
+button{
+    display: block;
+    background-color: #2C394B;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: #FF4C29;
+    font-family: TechMono;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: #37475e;
+}
+
+.sum{
+    font-size: 25px;
+    grid-column: 4;
+    grid-row: 3/ span 3;
+}
