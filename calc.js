@@ -45,7 +45,6 @@ function opVal(op){
             pastNum = null;
             currOp = null;
         }
-        display.textContent = '0';
     }
 }
 
@@ -80,15 +79,16 @@ keyNum.forEach(button=>{
 
 keyOp.forEach(button=>{
     button.addEventListener('click',e=>{
-        if(currOp === null){
-            opVal(e.target.textContent);
+        let pressed = e.target.textContent;
+        if(currOp === null || pressed === 'C' || pressed === 'CE'){
+            opVal(pressed);
             display.textContent = '0';
         }
         else{
             calculate(currOp);
-            opVal(e.target.textContent);
+            opVal(pressed);
         }
-        lastKey = e.target.textContent;
+        lastKey = pressed;
     })
 })
 
